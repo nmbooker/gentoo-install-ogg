@@ -1,0 +1,6 @@
+-abi_x86_32
++bluetooth
+-daemon
++glib
+-jack
+-ofono-headset

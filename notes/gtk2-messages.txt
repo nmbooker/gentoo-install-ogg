@@ -1,0 +1,19 @@
+ * Messages for package x11-libs/gtk+-2.24.33-r2:
+
+ * Please install app-text/evince for print preview functionality.
+ * Alternatively, check "gtk-print-preview-command" documentation and
+ * add it to your gtkrc.
+ * To make the gtk2 file chooser use 'current directory' mode by default,
+ * edit ~/.config/gtk-2.0/gtkfilechooser.ini to contain the following:
+ * [Filechooser Settings]
+ * StartupMode=cwd
+ * 
+ * (Note: Above message is only printed the first time package is
+ * installed. Please look at /usr/share/doc/gtk+-2.24.33-r2/README.gentoo*
+ * for future reference)
+
+ * GNU info directory index is up-to-date.
+
+ * IMPORTANT: 12 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+

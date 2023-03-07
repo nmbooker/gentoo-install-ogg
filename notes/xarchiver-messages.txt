@@ -1,0 +1,8 @@
+
+ * You need external programs for some formats, including:
+ * 7zip - app-arch/p7zip
+ * arj - app-arch/arj
+ * lha - app-arch/lha
+ * lzop - app-arch/lzop
+ * rar - app-arch/unrar app-arch/rar
+ * zip - app-arch/unzip app-arch/zip

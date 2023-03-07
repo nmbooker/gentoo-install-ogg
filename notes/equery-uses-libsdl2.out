@@ -1,0 +1,42 @@
+Script started on 2023-03-06 19:42:46+00:00 [COMMAND="equery uses libsdl2" TERM="tmux-256color" TTY="/dev/pts/3" COLUMNS="104" LINES="64"]
+[ Legend : [01mU[39;49;00m - final flag setting for installation]
+[        : [01mI[39;49;00m - package is installed with flag     ]
+[ Colors : [31;01mset[39;49;00m, [34;01munset[39;49;00m                             ]
+ * Found these USE flags for [32;01mmedia-libs/libsdl2-2.24.2[39;49;00m:
+[01m U I[39;49;00m
+ + + [31;01mX                  [39;49;00m : Add support for X11
+ - - [34;01mabi_x86_32         [39;49;00m : 32-bit (x86) libraries
+ + + [31;01malsa               [39;49;00m : Add support for media-libs/alsa-lib (Advanced Linux Sound Architecture)
+ - - [34;01mcpu_flags_x86_3dnow[39;49;00m : Use the 3DNow! instruction set
+ + + [31;01mcpu_flags_x86_mmx  [39;49;00m : Use the MMX instruction set
+ + + [31;01mcpu_flags_x86_sse  [39;49;00m : Use the SSE instruction set
+ + + [31;01mcpu_flags_x86_sse2 [39;49;00m : Use the SSE2 instruction set
+ + + [31;01mdbus               [39;49;00m : Enable dbus support for anything that needs it (gpsd, gnomemeeting, etc)
+ - - [34;01mdoc                [39;49;00m : Add extra documentation (API, Javadoc, etc). It is recommended to enable per
+                           package instead of globally
+ - - [34;01mfcitx4             [39;49;00m : Enable support for app-i18n/fcitx 4
+ - - [34;01mgles1              [39;49;00m : include OpenGL ES 1.0 support
+ - - [34;01mgles2              [39;49;00m : include OpenGL ES 2.0 support
+ - - [34;01mhaptic             [39;49;00m : Enable the haptic (force feedback) subsystem
+ - - [34;01mibus               [39;49;00m : Enable support for app-i18n/ibus
+ - - [34;01mjack               [39;49;00m : Add support for the JACK Audio Connection Kit
+ + + [31;01mjoystick           [39;49;00m : Control joystick support (disable at your own risk)
+ - - [34;01mkms                [39;49;00m : Build the KMSDRM video driver
+ - - [34;01mlibsamplerate      [39;49;00m : Build with support for converting sample rates using libsamplerate
+ - - [34;01mnas                [39;49;00m : Add support for network audio sound
+ + + [31;01mopengl             [39;49;00m : Add support for OpenGL (3D graphics)
+ - - [34;01moss                [39;49;00m : Add support for OSS (Open Sound System)
+ - - [34;01mpipewire           [39;49;00m : Enable support for the media-video/pipewire audio backend
+ + + [31;01mpulseaudio         [39;49;00m : Add support for PulseAudio sound server
+ - - [34;01msndio              [39;49;00m : Enable support for the media-sound/sndio backend
+ + + [31;01msound              [39;49;00m : Control audio support (disable at your own risk)
+ - - [34;01mstatic-libs        [39;49;00m : Build static versions of dynamic libraries as well
+ + + [31;01mthreads            [39;49;00m : Add threads support for various packages. Usually pthreads
+ + + [31;01mudev               [39;49;00m : Enable virtual/udev integration (device discovery, power and storage device
+                           support, etc)
+ + + [31;01mvideo              [39;49;00m : Control video support (disable at your own risk)
+ - - [34;01mvulkan             [39;49;00m : Enable Vulkan support
+ - - [34;01mwayland            [39;49;00m : Enable dev-libs/wayland backend
+ - - [34;01mxscreensaver       [39;49;00m : Add support for XScreenSaver extension
+
+Script done on 2023-03-06 19:42:47+00:00 [COMMAND_EXIT_CODE="0"]

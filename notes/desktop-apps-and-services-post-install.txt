@@ -1,0 +1,157 @@
+>>> Jobs: 93 of 93 complete                         Load avg: 4.30, 3.98, 4.82
+
+ * Messages for package acct-group/scanner-0:
+
+ * Adding group scanner
+
+ * Messages for package acct-group/plugdev-0-r1:
+
+ * Adding group plugdev
+
+ * Messages for package acct-group/avahi-0-r1:
+
+ * Adding group avahi
+
+ * Messages for package acct-group/netdev-0-r1:
+
+ * Adding group netdev
+
+ * Messages for package acct-group/nullmail-0:
+
+ * Adding group nullmail
+
+ * Messages for package acct-user/avahi-0-r1:
+
+ * Adding user avahi
+
+ * Messages for package acct-user/saned-0:
+
+ * Adding user saned
+
+ * Messages for package acct-user/nullmail-0:
+
+ * Adding user nullmail
+
+ * Messages for package net-dialup/ppp-2.4.9-r8:
+
+ * If the following test report contains a missing kernel configuration option that you need,
+ * you should reconfigure and rebuild your kernel before running pppd.
+ * Pon, poff and plog scripts have been supplied for experienced users.
+ * Users needing particular scripts (ssh,rsh,etc.) should check out the
+ * /usr/share/doc/ppp-2.4.9-r8/scripts directory.
+
+ * Messages for package dev-libs/botan-2.19.3:
+
+ * Disabling module(s): boost
+
+ * Messages for package mail-mta/nullmailer-2.2-r2:
+
+ * To create an initial setup, please do:
+ * emerge --config =mail-mta/nullmailer-2.2-r2
+
+ * Messages for package net-misc/modemmanager-1.18.12:
+
+ * If your USB modem shows up only as a storage device when you plug it
+ * in, then you should install sys-apps/usb_modeswitch, which will
+ * automatically switch it over to USB modem mode whenever you plug it
+ * in.
+ * 
+ * To control your modem without needing to enter the root password, add
+ * your user account to the 'plugdev' group.
+ * Pon, poff and plog scripts have been supplied for experienced users.
+ * Users needing particular scripts (ssh,rsh,etc.) should check out the
+ * /usr/share/doc/ppp-2.4.9-r8/scripts directory.
+
+ * Messages for package dev-libs/botan-2.19.3:
+
+ * Disabling module(s): boost
+
+ * Messages for package mail-mta/nullmailer-2.2-r2:
+
+ * To create an initial setup, please do:
+ * emerge --config =mail-mta/nullmailer-2.2-r2
+
+ * Messages for package net-misc/modemmanager-1.18.12:
+
+ * If your USB modem shows up only as a storage device when you plug it
+ * in, then you should install sys-apps/usb_modeswitch, which will
+ * automatically switch it over to USB modem mode whenever you plug it
+ * in.
+ * 
+ * To control your modem without needing to enter the root password, add
+ * your user account to the 'plugdev' group.
+ * 
+ * (Note: Above message is only printed the first time package is
+ * installed. Please look at /usr/share/doc/modemmanager-1.18.12/README.gentoo*
+ * for future reference)
+
+ * Messages for package net-wireless/wpa_supplicant-2.10-r1:
+
+ * If this is a clean installation of wpa_supplicant, you have to create
+ * a configuration file named /etc/wpa_supplicant/wpa_supplicant.conf An
+ * example configuration file is available for reference in
+ * /usr/share/doc/wpa_supplicant-2.10-r1/
+ * 
+ * (Note: Above message is only printed the first time package is
+ * installed. Please look at /usr/share/doc/wpa_supplicant-2.10-r1/README.gentoo*
+ * for future reference)
+ * WARNING: You are building with TKIP support disabled, which is recommended since
+ * this protocol is deprecated and insecure.  If you still need to connect to
+ * TKIP-enabled networks, you may turn this flag back on.  With this flag off,
+ * TKIP-enabled networks, including mixed mode TKIP/AES-CCMP will not even show up
+ * as available.  If your network is missing you may wish to USE=tkip
+
+ * Messages for package app-admin/sudo-1.9.12_p2:
+
+ * To use the -A (askpass) option, you need to install a compatible
+ * password program from the following list. Starred packages will
+ * automatically register for the use with sudo (but will not force
+ * the -A option):
+ * 
+ *  [*] net-misc/ssh-askpass-fullscreen
+ *      net-misc/x11-ssh-askpass
+ * 
+ * You can override the choice by setting the SUDO_ASKPASS environmnent
+ * variable to the program you want to use.
+
+ * Messages for package media-gfx/sane-backends-1.1.1-r13:
+
+ * Install additional packages for optional runtime features:
+ *   media-gfx/sane-airscan for Network scanner backend
+ *   media-gfx/iscan for Epson-specific backend
+ *   net-print/hplip for HP-specific backend
+
+ * Messages for package dev-lang/ruby-2.7.7:
+
+ * 
+ * To switch between available Ruby profiles, execute as root:
+ *      eselect ruby set ruby(23|24|...)
+ * 
+
+ * Messages for package net-print/hplip-3.22.10:
+
+ * For more information on setting up your printer please take a look at
+ * the hplip section of the gentoo printing guide:
+ * https://wiki.gentoo.org/wiki/Printing
+ * 
+ * (Note: Above message is only printed the first time package is
+ * installed. Please look at /usr/share/doc/hplip-3.22.10/README.gentoo*
+ * for future reference)
+
+ * Messages for package dev-lang/ruby-3.0.5:
+
+ * 
+ * To switch between available Ruby profiles, execute as root:
+ *      eselect ruby set ruby(23|24|...)
+ * 
+
+ * Messages for package dev-ruby/rubygems-3.2.33:
+
+ * 
+ * To switch between available Ruby profiles, execute as root:
+ *      eselect ruby set ruby(25|26|...)
+ * 
+
+ * Regenerating GNU info directory index...
+ * Processed 96 info files.
+

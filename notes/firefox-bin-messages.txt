@@ -1,0 +1,34 @@
+ * Messages for package www-client/firefox-bin-110.0.1:
+
+ *
+ * Note regarding Trusted Recursive Resolver aka DNS-over-HTTPS (DoH):
+ * Due to privacy concerns (encrypting DNS might be a good thing, sending all
+ * DNS traffic to Cloudflare by default is not a good idea and applications
+ * should respect OS configured settings), "network.trr.mode" was set to 5
+ * ("Off by choice") by default.
+ * You can enable DNS-over-HTTPS in Firefox-bin's preferences.
+ *
+ * Upstream operates a service named Normandy which allows Mozilla to
+ * push changes for default settings or even install new add-ons remotely.
+ * While this can be useful to address problems like 'Armagadd-on 2.0' or
+ * revert previous decisions to disable TLS 1.0/1.1, privacy and security
+ * concerns prevail, which is why we have switched off the use of this
+ * service by default.
+ *
+ * To re-enable this service set
+ *
+ *     app.normandy.enabled=true
+ *
+ * in about:config.
+ *
+ * Since firefox-91.0 we no longer install multiple shortcuts for
+ * each supported display protocol.  Instead we will only install
+ * one generic Mozilla Firefox shortcut.
+ * If you still want to be able to select between running Mozilla Firefox
+ * on X11 or Wayland, you have to re-create these shortcuts on your own.
+ * Optional programs for extra features:
+ *   x11-libs/libnotify for desktop notifications
+ *   gnome-base/gsettings-desktop-schemas for fallback mouse cursor theme e.g. on WMs
+
+ * GNU info directory index is up-to-date.
+

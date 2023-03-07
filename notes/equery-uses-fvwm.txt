@@ -1,0 +1,17 @@
+-bidi
+-debug
+-doc
+-lock
+-netpbm
++nls
+-perl
++png
++python_single_target_python3_10
+-python_single_target_python3_9
++readline
+-stroke
++svg
+-tk
++truetype
++vanilla
++xinerama

@@ -1,0 +1,167 @@
+Script started on 2023-03-06 19:45:55+00:00 [COMMAND="equery uses ffmpeg" TERM="tmux-256color" TTY="/dev/pts/3" COLUMNS="104" LINES="64"]
+[ Legend : [01mU[39;49;00m - final flag setting for installation]
+[        : [01mI[39;49;00m - package is installed with flag     ]
+[ Colors : [31;01mset[39;49;00m, [34;01munset[39;49;00m                             ]
+ * Found these USE flags for [32;01mmedia-video/ffmpeg-4.4.3[39;49;00m:
+[01m U I[39;49;00m
+ + + [31;01mX                     [39;49;00m : Add support for X11
+ - - [34;01mabi_x86_32            [39;49;00m : 32-bit (x86) libraries
+ + + [31;01malsa                  [39;49;00m : Add support for media-libs/alsa-lib (Advanced Linux Sound Architecture)
+ - - [34;01mamr                   [39;49;00m : Enables Adaptive Multi-Rate Audio support
+ - - [34;01mamrenc                [39;49;00m : Enables Adaptive Multi-Rate Audio encoding support with
+                              media-libs/vo-amrwbenc.
+ - - [34;01mbluray                [39;49;00m : Enable playback of Blu-ray filesystems
+ - - [34;01mbs2b                  [39;49;00m : Enables media-libs/libbs2b based Bauer stereo-to-binaural filter.
+ + + [31;01mbzip2                 [39;49;00m : Use the bzlib compression library
+ - - [34;01mcdio                  [39;49;00m : Enables audio CD grabbing with dev-libs/libcdio.
+ - - [34;01mchromaprint           [39;49;00m : Enables audio fingerprinting support with media-libs/chromaprint.
+ - - [34;01mchromium              [39;49;00m : Builds libffmpeg.so to enable media playback in Chromium-based browsers
+                              like Opera and Vivaldi.
+ - - [34;01mcodec2                [39;49;00m : Enables codec2 low bit rate speech codec support via media-libs/codec2.
+ - - [34;01mcpu_flags_x86_3dnow   [39;49;00m : Use the 3DNow! instruction set
+ - - [34;01mcpu_flags_x86_3dnowext[39;49;00m : Use the Enhanced 3DNow! instruction set
+ - - [34;01mcpu_flags_x86_aes     [39;49;00m : Enable support for Intel's AES instruction set (AES-NI)
+ - - [34;01mcpu_flags_x86_avx     [39;49;00m : Adds support for Advanced Vector Extensions instructions
+ - - [34;01mcpu_flags_x86_avx2    [39;49;00m : Adds support for Advanced Vector Extensions 2 instructions
+ - - [34;01mcpu_flags_x86_fma3    [39;49;00m : Use the Fused Multiply Add 3 instruction set ([fma] in cpuinfo)
+ - - [34;01mcpu_flags_x86_fma4    [39;49;00m : Use the Fused Multiply Add 4 instruction set
+ + + [31;01mcpu_flags_x86_mmx     [39;49;00m : Use the MMX instruction set
+ + + [31;01mcpu_flags_x86_mmxext  [39;49;00m : Use the Extended MMX instruction set (a subset of SSE) ([mmxext] or [sse]
+                              in cpuinfo)
+ + + [31;01mcpu_flags_x86_sse     [39;49;00m : Use the SSE instruction set
+ + + [31;01mcpu_flags_x86_sse2    [39;49;00m : Use the SSE2 instruction set
+ - - [34;01mcpu_flags_x86_sse3    [39;49;00m : Use the SSE3 instruction set ([pni] in cpuinfo, NOT ssse3)
+ - - [34;01mcpu_flags_x86_sse4_1  [39;49;00m : Enable SSE4.1 instruction support
+ - - [34;01mcpu_flags_x86_sse4_2  [39;49;00m : Enable SSE4.2 instruction support
+ - - [34;01mcpu_flags_x86_ssse3   [39;49;00m : Use the SSSE3 instruction set (NOT sse3/pni)
+ - - [34;01mcpu_flags_x86_xop     [39;49;00m : Enable the XOP instruction set
+ - - [34;01mcpudetection          [39;49;00m : Enables runtime CPU detection (useful for bindist, compatibility on other
+                              CPUs)
+[01m + -[39;49;00m [31;01mdav1d                 [39;49;00m : Enables AV1 decoding via media-libs/dav1d.
+ - - [34;01mdebug                 [39;49;00m : Enable extra debug codepaths, like asserts and extra output. If you want
+                              to get meaningful backtraces see
+                              https://wiki.gentoo.org/wiki/Project:Quality_Assurance/Backtraces
+ - - [34;01mdoc                   [39;49;00m : Add extra documentation (API, Javadoc, etc). It is recommended to enable
+                              per package instead of globally
+ + + [31;01mencode                [39;49;00m : Add support for encoding of audio or video files
+ - - [34;01mfdk                   [39;49;00m : Use external fdk-aac library for AAC encoding
+[01m + -[39;49;00m [31;01mfftools_aviocat       [39;49;00m : cat's a URL to another one, useful for dumping streams.
+[01m + -[39;49;00m [31;01mfftools_cws2fws       [39;49;00m : converts cws files (Macromedia Flash, compressed) to fws ones (Macromedia
+                              Flash, uncompressed).
+[01m + -[39;49;00m [31;01mfftools_ffescape      [39;49;00m : Escapes an input string, adopting the av_get_token() escaping logic.
+[01m + -[39;49;00m [31;01mfftools_ffeval        [39;49;00m : A simple expression evalutor.
+[01m + -[39;49;00m [31;01mfftools_ffhash        [39;49;00m : Computes a file's digest using libavutil algorithms.
+[01m + -[39;49;00m [31;01mfftools_fourcc2pixfmt [39;49;00m : Shows the relationships between rawvideo pixel formats and FourCC tags.
+[01m + -[39;49;00m [31;01mfftools_graph2dot     [39;49;00m : A tool to convert a libavfilter graph to a dot file.
+[01m + -[39;49;00m [31;01mfftools_ismindex      [39;49;00m : A tool for creating smooth streaming manifests.
+[01m + -[39;49;00m [31;01mfftools_pktdumper     [39;49;00m : Dumps packets as demuxed by libavformat.
+[01m + -[39;49;00m [31;01mfftools_qt-faststart  [39;49;00m : Rearranges a Quicktime file to facilitate network streaming.
+[01m + -[39;49;00m [31;01mfftools_sidxindex     [39;49;00m : Write an MPD file for fragmented MP4 files with a sidx index at the start
+                              of the file.
+[01m + -[39;49;00m [31;01mfftools_trasher       [39;49;00m : Writes burts of random data into a file. Great for testing error
+                              robustness/resilience/concealment.
+ - - [34;01mflite                 [39;49;00m : Adds a text-to-speech filter based on app-accessibility/flite.
+ - - [34;01mfontconfig            [39;49;00m : Support for configuring and customizing font access via
+                              media-libs/fontconfig
+ - - [34;01mfrei0r                [39;49;00m : Enable frei0r wrapping in libavfilter
+ - - [34;01mfribidi               [39;49;00m : Enables fribidi support in the drawtext filter.
+ - - [34;01mgcrypt                [39;49;00m : Enables gcrypt support: Needed for rtmp(t)e support if openssl, librtmp
+                              or gmp is not used.
+ - - [34;01mgme                   [39;49;00m : Enables support for media-libs/game-music-emu for playing various video
+                              game music formats.
+ - - [34;01mgmp                   [39;49;00m : Add support for dev-libs/gmp (GNU MP library)
+[01m + -[39;49;00m [31;01mgnutls                [39;49;00m : Prefer net-libs/gnutls as SSL/TLS provider (ineffective with USE=-ssl)
+[01m + -[39;49;00m [31;01mgpl                   [39;49;00m : Build GPL code. Should be enabled unless you require LGPL binaries.
+ - - [34;01mgsm                   [39;49;00m : Add support for the gsm lossy speech compression codec
+ - - [34;01mhardcoded-tables      [39;49;00m : Use pre-calculated tables rather than calculating them on the fly. It
+                              results in an increase of approximately 15% in the size of libavcodec,
+                              the main library impacted by this change. It enables savings in table
+                              generation time, done once at codec initialization, since by hardcoding
+                              the tables, they do not need to be computed at runtime. However, the
+                              savings are often negligible (~100k cycles is a typical number)
+                              especially when amortized over the entire encoding/decoding operation.
+                              Improvements are being made to the runtime initialization, and so over
+                              time, this option will have an impact on fewer and fewer codecs. 
+ + + [31;01miconv                 [39;49;00m : Enable support for the iconv character set conversion library
+ - - [34;01miec61883              [39;49;00m : Support for FireWire DV/HDV input device using media-libs/libiec61883.
+ - - [34;01mieee1394              [39;49;00m : Enable FireWire/iLink IEEE1394 support (dv, camera, ...)
+ - - [34;01mjack                  [39;49;00m : Add support for the JACK Audio Connection Kit
+ - - [34;01mjpeg2k                [39;49;00m : Support for JPEG 2000, a wavelet-based image compression format
+ - - [34;01mkvazaar               [39;49;00m : Enables media-libs/kvazaar based HEVC encoder.
+ - - [34;01mladspa                [39;49;00m : Enable the ability to support ladspa plugins
+ - - [34;01mlibaom                [39;49;00m : Enables media-libs/libaom based AV1 codec support.
+ - - [34;01mlibaribb24            [39;49;00m : Enables ARIB text and caption decoding via media-libs/aribb24.
+ - - [34;01mlibass                [39;49;00m : SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support
+ - - [34;01mlibcaca               [39;49;00m : Add support for colored ASCII-art graphics
+ - - [34;01mlibdrm                [39;49;00m : Enables x11-libs/libdrm support for better screen grabbing and hardware
+                              accelerated codecs.
+ - - [34;01mlibilbc               [39;49;00m : Enables iLBC de/encoding via media-libs/libilbc.
+ - - [34;01mlibrtmp               [39;49;00m : Enables Real Time Messaging Protocol using librtmp (media-video/rtmpdump)
+                              in addition to FFmpeg's native implementation.
+ - - [34;01mlibsoxr               [39;49;00m : Enables audio resampling through media-libs/soxr.
+ - - [34;01mlibtesseract          [39;49;00m : Enables the OCR filter via app-text/tesseract.
+ - - [34;01mlibv4l                [39;49;00m : Uses media-libs/libv4l for video4linux instead of direct calls. Adds
+                              support for more devices via the userspace library.
+ - - [34;01mlibxml2               [39;49;00m : Uses dev-libs/libxml2 to enable dash demuxing support.
+ - - [34;01mlv2                   [39;49;00m : Enables lv2 audio filter wrapper.
+ - - [34;01mlzma                  [39;49;00m : Support for LZMA (de)compression algorithm
+ - - [34;01mmodplug               [39;49;00m : Add libmodplug support for playing SoundTracker-style music files
+ + + [31;01mmp3                   [39;49;00m : Add support for reading mp3 files
+[01m + -[39;49;00m [31;01mnetwork               [39;49;00m : Enables network streaming support
+ - - [34;01mnvenc                 [39;49;00m : Add support for NVIDIA Encoder/Decoder (NVENC/NVDEC) API for hardware
+                              accelerated encoding and decoding on NVIDIA cards (requires
+                              x11-drivers/nvidia-drivers)
+ - - [34;01mopenal                [39;49;00m : Add support for the Open Audio Library
+ - - [34;01mopencl                [39;49;00m : Enable OpenCL support
+ + + [31;01mopengl                [39;49;00m : Add support for OpenGL (3D graphics)
+ - - [34;01mopenh264              [39;49;00m : Enables H.264 encoding suppoprt via media-libs/openh264.
+ - - [34;01mopenssl               [39;49;00m : Enables dev-libs/openssl support. Adds support for encrypted network
+                              protocols (TLS/HTTPS).
+ - - [34;01mopus                  [39;49;00m : Enable Opus audio codec support
+ - - [34;01moss                   [39;49;00m : Add support for OSS (Open Sound System)
+ - - [34;01mpic                   [39;49;00m : Force shared libraries to be built as PIC (this is slower)
+[01m + -[39;49;00m [31;01mpostproc              [39;49;00m : Build and install libpostproc.
+ + + [31;01mpulseaudio            [39;49;00m : Add support for PulseAudio sound server
+ - - [34;01mrav1e                 [39;49;00m : Enables AV1 encoding support via media-video/rav1e.
+ - - [34;01mrubberband            [39;49;00m : Adds time-stretching and pitch-shifting audio filter based on
+                              media-libs/rubberband.
+ - - [34;01msamba                 [39;49;00m : Add support for SAMBA (Windows File and Printer sharing)
+ + + [31;01msdl                   [39;49;00m : Add support for Simple Direct Layer (media library)
+ - - [34;01msnappy                [39;49;00m : Enable app-arch/snappy support. Required for e.g. Vidvox Hap encoder.
+ - - [34;01msndio                 [39;49;00m : Enable support for the media-sound/sndio backend
+ - - [34;01mspeex                 [39;49;00m : Add support for the speex audio codec (used for speech)
+ - - [34;01msrt                   [39;49;00m : Enable support for Secure Reliable Transport (SRT) via net-libs/srt
+ - - [34;01mssh                   [39;49;00m : Enable SSH/sftp support via net-libs/libssh.
+ - - [34;01mstatic-libs           [39;49;00m : Build static versions of dynamic libraries as well
+ + + [31;01msvg                   [39;49;00m : Add support for SVG (Scalable Vector Graphics)
+ - - [34;01msvt-av1               [39;49;00m : Enables AV1 encoding support via media-libs/svt-av1.
+ - - [34;01mtest                  [39;49;00m : Enable dependencies and/or preparations necessary to run tests (usually
+                              controlled by FEATURES=test but can be toggled independently)
+ - - [34;01mtheora                [39;49;00m : Add support for the Theora Video Compression Codec
+[01m + -[39;49;00m [31;01mthreads               [39;49;00m : Add threads support for various packages. Usually pthreads
+ + + [31;01mtruetype              [39;49;00m : Add support for FreeType and/or FreeType2 fonts
+ - - [34;01mtwolame               [39;49;00m : Enables MP2 encoding via media-sound/twolame as an alternative to the
+                              internal encoder.
+ - - [34;01mv4l                   [39;49;00m : Enable support for video4linux (using linux-headers or userspace libv4l
+                              libraries)
+ - - [34;01mvaapi                 [39;49;00m : Enable Video Acceleration API for hardware decoding
+ - - [34;01mvdpau                 [39;49;00m : Enable the Video Decode and Presentation API for Unix acceleration
+                              interface
+ - - [34;01mverify-sig            [39;49;00m : Verify upstream signatures on distfiles
+ - - [34;01mvidstab               [39;49;00m : Enables video stabilization filter using vid.stab library
+                              (media-libs/vidstab).
+ + + [31;01mvorbis                [39;49;00m : Add support for the OggVorbis audio codec
+ - - [34;01mvpx                   [39;49;00m : Enables VP8 and VP9 codec support using libvpx: Decoding does not require
+                              this to be enabled but libvpx can also be used for decoding; encoding
+                              requires this useflag to be enabled though.
+ - - [34;01mvulkan                [39;49;00m : Enables support for the vulkan API for GPU offload.
+ - - [34;01mwebp                  [39;49;00m : Add support for the WebP image format
+ + + [31;01mx264                  [39;49;00m : Enable h264 encoding using x264
+ - - [34;01mx265                  [39;49;00m : Enables HEVC encoding with media-libs/x265.
+ + + [31;01mxvid                  [39;49;00m : Add support for xvid.org's open-source mpeg-4 codec
+ - - [34;01mzeromq                [39;49;00m : Enables net-libs/zeromq support with the zmq/azmq filters.
+ - - [34;01mzimg                  [39;49;00m : Enables media-libs/zimg based scale filter.
+ + + [31;01mzlib                  [39;49;00m : Add support for zlib (de)compression
+ - - [34;01mzvbi                  [39;49;00m : Enables media-libs/zvbi based teletext decoder.
+
+Script done on 2023-03-06 19:45:56+00:00 [COMMAND_EXIT_CODE="0"]

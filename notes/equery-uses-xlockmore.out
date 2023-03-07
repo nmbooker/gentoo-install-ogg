@@ -1,0 +1,23 @@
+Script started on 2023-03-06 19:29:11+00:00 [COMMAND="equery uses xlockmore" TERM="tmux-256color" TTY="/dev/pts/3" COLUMNS="104" LINES="64"]
+[ Legend : [01mU[39;49;00m - final flag setting for installation]
+[        : [01mI[39;49;00m - package is installed with flag     ]
+[ Colors : [31;01mset[39;49;00m, [34;01munset[39;49;00m                             ]
+ * Found these USE flags for [32;01mx11-misc/xlockmore-5.71[39;49;00m:
+[01m U I[39;49;00m
+ + + [31;01mcrypt      [39;49;00m : Add support for encryption -- using mcrypt or gpg where applicable
+ - - [34;01mdebug      [39;49;00m : Enable extra debug codepaths, like asserts and extra output. If you want to get
+                   meaningful backtraces see
+                   https://wiki.gentoo.org/wiki/Project:Quality_Assurance/Backtraces
+ + + [31;01mgtk        [39;49;00m : Add support for x11-libs/gtk+ (The GIMP Toolkit)
+ - - [34;01mimagemagick[39;49;00m : Enable optional support for the ImageMagick or GraphicsMagick image converter
+ - - [34;01mmotif      [39;49;00m : Add support for the Motif toolkit
+ - - [34;01mnas        [39;49;00m : Add support for network audio sound
+ + + [31;01mopengl     [39;49;00m : Add support for OpenGL (3D graphics)
+ + + [31;01mpam        [39;49;00m : Add support for PAM (Pluggable Authentication Modules) - DANGEROUS to arbitrarily
+                   flip
+ + + [31;01mtruetype   [39;49;00m : Add support for FreeType and/or FreeType2 fonts
+ - - [34;01mvtlock     [39;49;00m : Enables support for virtual terminal locking
+ + + [31;01mxinerama   [39;49;00m : Add support for querying multi-monitor screen geometry through the Xinerama API
+ - - [34;01mxlockrc    [39;49;00m : Enables xlockrc for people without PAM
+
+Script done on 2023-03-06 19:29:12+00:00 [COMMAND_EXIT_CODE="0"]
