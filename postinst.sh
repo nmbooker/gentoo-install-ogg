@@ -406,8 +406,6 @@ echo "app-editors/emacs toolkit-scroll-bars" > /etc/portage/package.use/emacs
 commit_etc "Set USE flags for app-editors/emacs"
 echo "x11-misc/dex ~amd64" > /etc/portage/package.accept_keywords/dex
 commit_etc "Accept keyword ~amd64 for x11-misc/dex (autostart)"
-echo "x11-misc/light-locker ~amd64" > /etc/portage/package.accept_keywords/light-locker
-commit_etc "Accept keyword ~amd64 for x11-misc/light-locker"
 echo "app-backup/deja-dup ~amd64" > /etc/portage/package.accept_keywords/deja-dup
 commit_etc "Accept keyword ~amd64 for app-backup/deja-dup"
 cat > /etc/portage/package.use/gvfs <<-END
@@ -438,7 +436,6 @@ my_emerge --verbose --newuse \
 	x11-misc/dex \
 	x11-misc/gigolo \
 	x11-misc/redshift \
-	x11-misc/light-locker \
 	x11-themes/gentoo-artwork
 commit_etc "emerged desktop utilities"
 
@@ -463,7 +460,12 @@ my_emerge --verbose --newuse x11-misc/lightdm
 commit_etc "Emerged x11-misc/lightdm"
 systemctl enable lightdm.service
 
-# TODO light-locker
+if [ -x /usr/bin/ssh-agent ]
+then
+	sed -i \
+		'/^Exec=/cExec=/usr/bin/ssh-agent /usr/local/bin/nscde' \
+		/usr/share/xsessions/nscde.desktop
+fi
 
 # TODO consider using eix https://wiki.gentoo.org/wiki/Eix
 # TODO Add shortcut to Gentoo Cheatsheet to the help subpanel
