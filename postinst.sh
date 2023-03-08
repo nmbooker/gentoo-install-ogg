@@ -443,7 +443,7 @@ echo "Mark nano and gnome-keyring as manually installed"
 # depclean wanted to remove them after a new install, but things will be
 # relying on gnome-keyring and I want to keep nano installed as a backup
 # in case I mess up vim
-my_emerge --verbose --newuse gnome-base/gnome-keyring app-editors/nano
+my_emerge --verbose --newuse --deep gnome-base/gnome-keyring app-editors/nano
 commit_etc "Added gnome-keyring and nano to selected packages"
 
 if which nscde
