@@ -485,8 +485,6 @@ fi
 # TODO Bind in-window Super-Left-Drag to move
 # TODO Remove keybindings for Shift-Arrow to switch windows (I want to use that in apps!)
 # TODO Warp pointer to titlebar of new window?
-# TODO Start xfce4-power-manager with NsCDE
-# TODO Start hp-systray with NsCDE
 # TODO fix backspace key in xterm
 
 # Stuff for work (probably add to boxbuild)
