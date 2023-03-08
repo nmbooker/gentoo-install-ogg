@@ -435,7 +435,8 @@ my_emerge --verbose --newuse \
 	x11-apps/xinput \
 	x11-misc/dex \
 	x11-misc/gigolo \
-	x11-misc/redshift
+	x11-misc/redshift \
+	x11-themes/gentoo-artwork
 commit_etc "emerged desktop utilities"
 
 echo "Mark nano and gnome-keyring as manually installed"
