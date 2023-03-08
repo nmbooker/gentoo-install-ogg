@@ -406,11 +406,20 @@ echo "app-editors/emacs toolkit-scroll-bars" > /etc/portage/package.use/emacs
 commit_etc "Set USE flags for app-editors/emacs"
 echo "x11-misc/dex ~amd64" > /etc/portage/package.accept_keywords/dex
 commit_etc "Accept keyword ~amd64 for x11-misc/dex (autostart)"
+echo "app-backup/deja-dup ~amd64" > /etc/portage/package.accept_keywords/deja-dup
+commit_etc "Accept keyword ~amd64 for app-backup/deja-dup"
+cat > /etc/portage/package.use/gvfs <<-END
+	# required by app-backup/deja-dup-43.4-r1::gentoo
+	# required by app-backup/deja-dup (argument)
+	>=gnome-base/gvfs-1.50.3 fuse
+	END
+commit_etc "USE fuse for gnome-base/gvfs, on behalf of deja-dup"
 commit_etc "Commit before emerging desktop utilities"
 my_emerge --verbose --newuse \
 	app-admin/stow \
 	app-admin/system-config-printer \
 	app-arch/xarchiver \
+	app-backup/deja-dup \
 	app-editors/emacs \
 	gnome-extra/nm-applet \
 	media-gfx/ristretto \
