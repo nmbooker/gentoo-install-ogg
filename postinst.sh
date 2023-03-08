@@ -467,12 +467,12 @@ then
 		/usr/share/xsessions/nscde.desktop
 fi
 
+
 # TODO consider using eix https://wiki.gentoo.org/wiki/Eix
 # TODO Add shortcut to Gentoo Cheatsheet to the help subpanel
 # TODO media-gfx/sane-airscan
 # TODO is there a way to re-display the post-install messages from emerge?
 # TODO https://wiki.gentoo.org/wiki/Printing#Printing-related_applications
-# TODO doomemacs
 # TODO equery depends dev-lang/ruby
 # TODO warpinator https://github.com/linuxmint/warpinator
 # TODO timeshift https://github.com/linuxmint/timeshift
