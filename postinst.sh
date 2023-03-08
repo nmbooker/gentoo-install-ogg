@@ -468,6 +468,10 @@ then
 fi
 
 
+# TODO Install nocsd (maybe make a local ebuild?)
+# 	https://github.com/PCMan/gtk3-nocsd
+# 	deja-dup is working horribly with CSD.
+# TODO fix font and widget sizes in deja-dup
 # TODO consider using eix https://wiki.gentoo.org/wiki/Eix
 # TODO Add shortcut to Gentoo Cheatsheet to the help subpanel
 # TODO media-gfx/sane-airscan
