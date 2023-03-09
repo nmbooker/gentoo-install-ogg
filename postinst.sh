@@ -414,6 +414,8 @@ cat > /etc/portage/package.use/gvfs <<-END
 	>=gnome-base/gvfs-1.50.3 fuse
 	END
 commit_etc "USE fuse for gnome-base/gvfs, on behalf of deja-dup"
+echo "app-misc/remind tk" > /etc/portage/package.use/remind
+commit_etc "Set custom USE flags for app-misc/remind"
 commit_etc "Commit before emerging desktop utilities"
 my_emerge --verbose --newuse \
 	app-admin/stow \
@@ -421,6 +423,7 @@ my_emerge --verbose --newuse \
 	app-arch/xarchiver \
 	app-backup/deja-dup \
 	app-editors/emacs \
+	app-misc/remind \
 	app-portage/pfl \
 	gnome-extra/nm-applet \
 	media-gfx/ristretto \
