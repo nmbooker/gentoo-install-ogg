@@ -421,6 +421,7 @@ my_emerge --verbose --newuse \
 	app-arch/xarchiver \
 	app-backup/deja-dup \
 	app-editors/emacs \
+	app-portage/pfl \
 	gnome-extra/nm-applet \
 	media-gfx/ristretto \
 		xfce-base/tumbler \
@@ -437,6 +438,8 @@ my_emerge --verbose --newuse \
 	x11-misc/gigolo \
 	x11-misc/redshift \
 	x11-themes/gentoo-artwork
+	# pfl provides e-file
+		# https://forums.gentoo.org/viewtopic-t-822242-start-0.html
 commit_etc "emerged desktop utilities"
 
 echo "Mark nano and gnome-keyring as manually installed"
