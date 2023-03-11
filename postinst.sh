@@ -201,8 +201,9 @@ commit_etc "Allow fvwm3 to be installed"
 my_emerge --verbose --newuse \
 	app-eselect/eselect-repository \
 	dev-util/pkgcheck \
-	dev-util/pkgdev
-commit_etc "Emerged eselect-repository, pkgcheck and pkgdev"
+	dev-util/pkgdev \
+	net-misc/rsync
+commit_etc "Emerged eselect-repository, pkgcheck, pkgdev and rsync"
 
 eselect repository add guru
 commit_etc "Add guru repository"
@@ -212,17 +213,14 @@ commit_etc "Synced guru repository"
 if ! [ -d /var/db/repos/local ]
 then
 	eselect repository create local
-	(cd /var/db/repos/local \
-		&& tar xf "$script_location/var-db-repos-local.2023-03-06T1626.TARBOMB.tar.gz"
-	)
+	rsync -r "$script_location/repos/local/" /var/db/repos/local/
 fi
 
 # When creating and modifying ebuilds:
 # cd /var/db/repos/local
 # pkgcheck scan
 # pkgdev manifest
-# Remember to back up to a new tarball and update the above referenced one
-# TODO track local repository in git
+# rsync -r ./ /home/nick/gentoo-install-ogg/repos/local/
 
 function set_up_sudo()
 {
