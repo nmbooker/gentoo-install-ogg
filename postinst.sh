@@ -408,6 +408,8 @@ echo "x11-misc/dex ~amd64" > /etc/portage/package.accept_keywords/dex
 commit_etc "Accept keyword ~amd64 for x11-misc/dex (autostart)"
 echo "app-backup/deja-dup ~amd64" > /etc/portage/package.accept_keywords/deja-dup
 commit_etc "Accept keyword ~amd64 for app-backup/deja-dup"
+echo "app-editors/vscode ~amd64" > /etc/portage/package.accept_keywords/vscode
+commit_etc "Accept keyword ~amd64 for app-editors/vscode"
 cat > /etc/portage/package.use/gvfs <<-END
 	# required by app-backup/deja-dup-43.4-r1::gentoo
 	# required by app-backup/deja-dup (argument)
@@ -425,6 +427,7 @@ my_emerge --verbose --newuse \
 	app-arch/xarchiver \
 	app-backup/deja-dup \
 	app-editors/emacs \
+	app-editors/vscode \
 	app-misc/remind \
 	app-portage/pfl \
 	gnome-extra/nm-applet \
