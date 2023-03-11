@@ -416,6 +416,8 @@ cat > /etc/portage/package.use/gvfs <<-END
 commit_etc "USE fuse for gnome-base/gvfs, on behalf of deja-dup"
 echo "app-misc/remind tk" > /etc/portage/package.use/remind
 commit_etc "Set custom USE flags for app-misc/remind"
+echo "net-p2p/syncthing ~amd64" > /etc/portage/package.accept_keywords/syncthing
+commit_etc "Accept testing version of syncthing due to go version conflict"
 commit_etc "Commit before emerging desktop utilities"
 my_emerge --verbose --newuse \
 	app-admin/stow \
