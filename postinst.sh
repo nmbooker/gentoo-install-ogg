@@ -408,8 +408,6 @@ echo "x11-misc/dex ~amd64" > /etc/portage/package.accept_keywords/dex
 commit_etc "Accept keyword ~amd64 for x11-misc/dex (autostart)"
 echo "app-backup/deja-dup ~amd64" > /etc/portage/package.accept_keywords/deja-dup
 commit_etc "Accept keyword ~amd64 for app-backup/deja-dup"
-echo "app-editors/vscode ~amd64" > /etc/portage/package.accept_keywords/vscode
-commit_etc "Accept keyword ~amd64 for app-editors/vscode"
 cat > /etc/portage/package.use/gvfs <<-END
 	# required by app-backup/deja-dup-43.4-r1::gentoo
 	# required by app-backup/deja-dup (argument)
@@ -427,7 +425,6 @@ my_emerge --verbose --newuse \
 	app-arch/xarchiver \
 	app-backup/deja-dup \
 	app-editors/emacs \
-	app-editors/vscode \
 	app-misc/remind \
 	app-portage/pfl \
 	gnome-extra/nm-applet \
@@ -449,6 +446,15 @@ my_emerge --verbose --newuse \
 	# pfl provides e-file
 		# https://forums.gentoo.org/viewtopic-t-822242-start-0.html
 commit_etc "emerged desktop utilities"
+
+echo "app-editors/vscode ~amd64" > /etc/portage/package.accept_keywords/vscode
+commit_etc "Accept keyword ~amd64 for app-editors/vscode"
+echo "You need to unmask the license yourself if you haven't already - a simple way to do so is:"
+echo 'echo "app-editors/vscode Microsoft-vscode" >> /etc/portage/package.license'
+echo ""
+my_emerge --verbose --newuse app-editors/vscode
+commit_etc "emerged app-editors/vscode"
+
 
 echo "Mark nano and gnome-keyring as manually installed"
 # depclean wanted to remove them after a new install, but things will be
