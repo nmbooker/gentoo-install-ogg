@@ -426,7 +426,6 @@ my_emerge --verbose --newuse \
 	app-backup/deja-dup \
 	app-editors/emacs \
 	app-misc/remind \
-	app-portage/pfl \
 	gnome-extra/nm-applet \
 	media-gfx/ristretto \
 		xfce-base/tumbler \
