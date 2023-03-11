@@ -202,6 +202,13 @@ my_emerge --verbose --newuse \
 	app-eselect/eselect-repository \
 	dev-util/pkgcheck \
 	dev-util/pkgdev
+commit_etc "Emerged eselect-repository, pkgcheck and pkgdev"
+
+eselect repository add guru
+commit_etc "Add guru repository"
+emerge --sync guru
+commit_etc "Synced guru repository"
+
 if ! [ -d /var/db/repos/local ]
 then
 	eselect repository create local
@@ -418,12 +425,15 @@ echo "app-misc/remind tk" > /etc/portage/package.use/remind
 commit_etc "Set custom USE flags for app-misc/remind"
 echo "net-p2p/syncthing ~amd64" > /etc/portage/package.accept_keywords/syncthing
 commit_etc "Accept testing version of syncthing due to go version conflict"
+echo "app-backup/timeshift::guru ~amd64" > /etc/portage/package.accept_keywords/timeshift
+commit_etc "Allow installation of app-backup/timeshift from guru repo"
 commit_etc "Commit before emerging desktop utilities"
 my_emerge --verbose --newuse \
 	app-admin/stow \
 	app-admin/system-config-printer \
 	app-arch/xarchiver \
 	app-backup/deja-dup \
+	app-backup/timeshift \
 	app-editors/emacs \
 	app-misc/remind \
 	gnome-extra/nm-applet \
