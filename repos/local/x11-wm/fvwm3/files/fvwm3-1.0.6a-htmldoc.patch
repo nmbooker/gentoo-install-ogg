@@ -1,0 +1,38 @@
+diff -r -u a/doc/Makefile.am b/doc/Makefile.am
+--- a/doc/Makefile.am	2023-01-16 19:48:02.000000000 +0000
++++ b/doc/Makefile.am	2023-03-05 18:25:58.085663940 +0000
+@@ -22,13 +22,14 @@
+ nothing:
+ 
+ clean:
+-	rm -f *.1 *.ad
++	rm -f *.1 *.ad *.html
+ 
+ distclean-local: clean
+ 
+ if FVWM_BUILD_MANDOC
+ M1M = $(filter-out fvwm3_manpage_source.adoc, $(MODULE_ADOC))
+ man1_MANS = $(patsubst %.adoc,%.1, $(M1M))
++html_MANS = $(patsubst %.adoc,%.html, $(M1M))
+ EXTRACT_SECTIONS = \
+ 	commands \
+ 	menus \
+@@ -36,8 +37,9 @@
+ SECTION_FILES = $(patsubst %,fvwm3_%.ad, $(EXTRACT_SECTIONS))
+ 
+ all: docs
+-docs: $(man1_MANS)
++docs: $(man1_MANS) $(html_MANS)
+ $(man1_MANS): $(SECTION_FILES)
++$(html_MANS): $(SECTION_FILES)
+ 
+ %.ad: fvwm3_manpage_source.adoc
+ 	SECTION=$(patsubst fvwm3_%.ad,%,$@); \
+@@ -48,4 +50,7 @@
+ 
+ %.1: %.adoc
+ 	"$(ASCIIDOC)" -b manpage -a "$(patsubst %.1,%,$@)" "$<" -o "$@"
++
++%.html: %.adoc
++	"$(ASCIIDOC)" -b html5 -a "$(patsubst %.html,%,$@)" "$<" -o "$@"
+ endif
