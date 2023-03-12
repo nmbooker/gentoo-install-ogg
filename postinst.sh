@@ -458,6 +458,7 @@ my_emerge --verbose --newuse \
 	net-print/gtklp \
 	sys-apps/the_silver_searcher \
 	sys-fs/udiskie \
+	sys-process/cronie \
 	x11-terms/xfce4-terminal \
 	x11-apps/xinput \
 	x11-misc/dex \
