@@ -425,7 +425,7 @@ echo "net-p2p/syncthing ~amd64" > /etc/portage/package.accept_keywords/syncthing
 commit_etc "Accept testing version of syncthing due to go version conflict"
 echo "app-backup/timeshift::guru ~amd64" > /etc/portage/package.accept_keywords/timeshift
 commit_etc "Allow installation of app-backup/timeshift from guru repo"
-cat > /etc/portage/package.accept_keywords/libdbusmenu <<-END
+cat > /etc/portage/package.use/libdbusmenu <<-END
 	# required by x11-libs/xapp-2.4.2::gentoo
 	# required by app-backup/timeshift-22.11.1-r1::guru
 	# required by app-backup/timeshift (argument)
