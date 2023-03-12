@@ -444,6 +444,7 @@ my_emerge --verbose --newuse \
 	app-admin/system-config-printer \
 	app-arch/xarchiver \
 	app-backup/deja-dup \
+	app-backup/duply \
 	app-backup/timeshift \
 	app-editors/emacs \
 	app-misc/stripansi \
