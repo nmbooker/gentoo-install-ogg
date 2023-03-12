@@ -424,12 +424,13 @@ commit_etc "Set custom USE flags for app-misc/remind"
 echo "net-p2p/syncthing ~amd64" > /etc/portage/package.accept_keywords/syncthing
 commit_etc "Accept testing version of syncthing due to go version conflict"
 echo "app-backup/timeshift::guru ~amd64" > /etc/portage/package.accept_keywords/timeshift
+commit_etc "Allow installation of app-backup/timeshift from guru repo"
 cat > /etc/portage/package.accept_keywords/stripansi <<-END
 	=app-misc/stripansi-9999::local ~amd64
 	>=dev-lang/ghc-9.0 ~amd64
 	app-admin/haskell-updater ~amd64
 	END
-commit_etc "Allow installation of app-backup/timeshift from guru repo"
+commit_etc "Allow installation of app-misc/stripansi from my local repo"
 commit_etc "Commit before emerging desktop utilities"
 my_emerge --verbose --newuse \
 	app-admin/stow \
