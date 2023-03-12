@@ -521,7 +521,6 @@ fi
 # TODO https://wiki.gentoo.org/wiki/Printing#Printing-related_applications
 # TODO equery depends dev-lang/ruby
 # TODO warpinator https://github.com/linuxmint/warpinator
-# TODO timeshift https://github.com/linuxmint/timeshift
 # TODO webapp-manager https://github.com/linuxmint/webapp-manager
 # TODO a real MTA for local mail delivery
 # TODO portage update notifications (porticron?)
