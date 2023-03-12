@@ -468,6 +468,9 @@ my_emerge --verbose --newuse \
 		# https://forums.gentoo.org/viewtopic-t-822242-start-0.html
 commit_etc "emerged desktop utilities"
 
+systemctl enable --now cronie.service
+commit_etc "Enable cronie for task scheduling"
+
 echo "app-editors/vscode ~amd64" > /etc/portage/package.accept_keywords/vscode
 commit_etc "Accept keyword ~amd64 for app-editors/vscode"
 echo "You need to unmask the license yourself if you haven't already - a simple way to do so is:"
