@@ -456,6 +456,7 @@ my_emerge --verbose --newuse \
 	net-misc/networkmanager \
 	net-p2p/syncthing \
 	net-print/gtklp \
+	sci-calculators/galculator \
 	sys-apps/the_silver_searcher \
 	sys-fs/udiskie \
 	sys-process/cronie \
