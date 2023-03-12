@@ -9,7 +9,7 @@ EGIT_REPO_URI="https://github.com/nmbooker/stripansi.git"
 SCM="git-r3"
 CABAL_FEATURES=""
 
-inherit ${SCM} haskell-cabal
+inherit ${SCM}
 
 LICENSE="GPL-3+"
 SLOT="0"
@@ -19,24 +19,23 @@ DEPEND=""
 RDEPEND=""
 BDEPEND="
 	>=dev-lang/ghc-9.0
-	>=dev-haskell/cabal-2.2.0.1
 "
-DOCS=( README.md )
+DOCS=( README.md LICENSE )
 
 src_prepare() {
 	default
 }
 
 src_configure() {
-	haskell-cabal_src_configure \
-		--flag=-pedantic
+	default
+}
+
+src_compile() {
+	ghc -o stripansi src/Main.hs || die "compiling stripansi failed"
 }
 
 src_install() {
 	default
-	cabal_src_install
+	dobin stripansi
 }
 
-pkg_postinst() {
-	haskell-cabal_pkg_postinst
-}
