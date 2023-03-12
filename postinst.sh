@@ -205,7 +205,7 @@ my_emerge --verbose --newuse \
 	net-misc/rsync
 commit_etc "Emerged eselect-repository, pkgcheck, pkgdev and rsync"
 
-eselect repository add guru
+eselect repository enable guru
 commit_etc "Add guru repository"
 emerge --sync guru
 commit_etc "Synced guru repository"
