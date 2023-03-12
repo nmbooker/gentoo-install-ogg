@@ -438,6 +438,8 @@ cat > /etc/portage/package.accept_keywords/stripansi <<-END
 	app-admin/haskell-updater ~amd64
 	END
 commit_etc "Allow installation of app-misc/stripansi from my local repo"
+echo "app-shells/zsh doc examples" > /etc/portage/package.use/zsh
+commit_etc "Add USE flags to include zsh docs and examples"
 commit_etc "Commit before emerging desktop utilities"
 my_emerge --verbose --newuse \
 	app-admin/stow \
@@ -449,6 +451,9 @@ my_emerge --verbose --newuse \
 	app-editors/emacs \
 	app-misc/stripansi \
 	app-misc/remind \
+	app-shells/gentoo-zsh-completions \
+	app-shells/zsh \
+	app-shells/zsh-completions \
 	gnome-extra/nm-applet \
 	media-gfx/ristretto \
 		xfce-base/tumbler \
