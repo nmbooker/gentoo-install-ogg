@@ -442,6 +442,8 @@ echo "app-shells/zsh doc examples" > /etc/portage/package.use/zsh
 commit_etc "Add USE flags to include zsh docs and examples"
 echo "app-admin/conky vim-syntax" > /etc/portage/package.use/conky
 commit_etc "Set USE flags for conky"
+echo "dev-lang/python tk" > /etc/portage/package.use/python-tkinter
+commit_etc "Enable Tkinter when building Python"
 commit_etc "Commit before emerging desktop utilities"
 my_emerge --verbose --newuse \
 	app-admin/conky \
