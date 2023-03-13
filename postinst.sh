@@ -4,7 +4,7 @@ max_jobs=6
 max_load=3.5
 	# number of real cores, plus 1 to maybe possibly take advantage of hypertghreading and IO bound work
 
-USE="X gpm png pulseaudio unicode xinerama -llvm"
+USE="X dist-kernel gpm png pulseaudio unicode xinerama -llvm"
 VIDEO_CARDS="nouveau intel vesa"
 
 if [ "$(id -u)" -ne 0 ]
