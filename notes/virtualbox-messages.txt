@@ -1,0 +1,24 @@
+ * Messages for package acct-group/vboxusers-0-r1:
+
+ * Adding group vboxusers
+
+ * Messages for package app-emulation/virtualbox-7.0.6-r2:
+
+ * To launch VirtualBox just type: "virtualbox".
+ * You must be in the vboxusers group to use VirtualBox.
+ * 
+ * The latest user manual is available for download at:
+ * https://download.virtualbox.org/virtualbox/7.0.6/UserManual.pdf
+ * 
+ * Install additional packages for optional runtime features:
+ *   net-misc/bridge-utils for Advanced networking setups
+ *   sys-apps/usermode-utilities for Advanced networking setups
+ *   app-emulation/virtualbox-extpack-oracle for USB2, USB3, PXE boot, and VRDP support
+ *   app-emulation/virtualbox-additions for Guest additions ISO
+
+ * Regenerating GNU info directory index...
+ * Processed 107 info files.
+
+ * IMPORTANT: 15 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
