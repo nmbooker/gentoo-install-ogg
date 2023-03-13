@@ -454,6 +454,7 @@ my_emerge --verbose --newuse \
 	app-backup/duply \
 	app-backup/timeshift \
 	app-editors/emacs \
+	app-emulation/virtualbox \
 	app-misc/stripansi \
 	app-misc/remind \
 	app-shells/gentoo-zsh-completions \
