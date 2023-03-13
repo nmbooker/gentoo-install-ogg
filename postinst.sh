@@ -563,6 +563,8 @@ my_emerge --ask --verbose --newuse --deep @world
 commit_etc "Remerged world for updated USE flags"
 
 possibly_set_password_for_nick
+gpasswd -a nick vboxusers
+commit_etc "Add nick to vboxusers group"
 
 eselect news list new
 echo 'See `eselect news` to find out how to read news'
