@@ -304,6 +304,29 @@ function install_firefox()
 }
 install_firefox
 
+function install_seamonkey()
+{
+	commit_etc "Pre-installation commit for install_seamonkey"
+	cat > /etc/portage/package.use/seamonkey <<-END
+		www-client/seamonkey webrtc wifi
+
+
+		# required by www-client/seamonkey-2.53.14-r2::gentoo[system-libvpx]
+		# required by seamonkey (argument)
+		>=media-libs/libvpx-1.12.0-r1 postproc
+		# required by www-client/seamonkey-2.53.14-r2::gentoo[system-png]
+		# required by seamonkey (argument)
+		>=media-libs/libpng-1.6.39 apng
+		# required by www-client/seamonkey-2.53.14-r2::gentoo[system-sqlite]
+		# required by seamonkey (argument)
+		>=dev-db/sqlite-3.40.1 secure-delete
+		END
+	commit_etc "Set USE flags for seamonkey"
+	my_emerge --noreplace --verbose www-client/seamonkey
+	commit_etc "Emerged seamonkey"
+}
+install_seamonkey
+
 function install_nscde_deps()
 {
 	mkdir -p /etc/portage/sets
