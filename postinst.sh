@@ -176,7 +176,7 @@ fi
 
 if ! grep '^L10N=' /etc/portage/make.conf
 then
-	echo 'L10N="en-GB"' >> /etc/portage/make.conf
+	echo 'L10N="en-GB en"' >> /etc/portage/make.conf
 	commit_etc "Set up LION (used by at least firefox-bin)"
 fi
 
