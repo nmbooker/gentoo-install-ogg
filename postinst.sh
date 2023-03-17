@@ -75,6 +75,7 @@ function install_basics()
 	# Install the basic things I need to be able to debug the system
 	# and develop this script
 	my_emerge --noreplace \
+		app-text/tree \
 		sys-libs/gpm \
 		app-shells/bash-completion \
 		app-misc/tmux \
