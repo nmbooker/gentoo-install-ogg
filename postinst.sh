@@ -260,6 +260,7 @@ commit_etc "Emerged zip and unzip"
 my_emerge --verbose --newuse \
 	x11-apps/setxkbmap \
 	x11-apps/xinit \
+	x11-apps/xrandr \
 	x11-base/xorg-server \
 	x11-apps/xset \
 	x11-terms/xterm \
