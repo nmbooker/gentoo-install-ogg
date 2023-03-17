@@ -469,6 +469,8 @@ echo "app-admin/conky vim-syntax" > /etc/portage/package.use/conky
 commit_etc "Set USE flags for conky"
 echo "dev-lang/python tk" > /etc/portage/package.use/python-tkinter
 commit_etc "Enable Tkinter when building Python"
+echo "app-text/xpdf cmyk utils" > /etc/portage/package.use/xpdf
+commit_etc "Enable custom USE flags for app-text/xpdf"
 commit_etc "Commit before emerging desktop utilities"
 my_emerge --verbose --newuse \
 	app-admin/conky \
@@ -485,6 +487,7 @@ my_emerge --verbose --newuse \
 	app-shells/gentoo-zsh-completions \
 	app-shells/zsh \
 	app-shells/zsh-completions \
+	app-text/xpdf \
 	gnome-extra/nm-applet \
 	media-gfx/ristretto \
 		xfce-base/tumbler \
