@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess
+import sys
+import tkinter
+from tkinter import messagebox
+from typing import NoReturn
+from urllib.parse import urlparse
+
+
+class ConversionError(Exception):
+    pass
+
+def directory(gvfs_base_dir: str, url: str) -> str:
+    parts = urlparse(url)
+    match parts.scheme:
+        case 'file':
+            return parts.path
+        case 'sftp':
+            params = [f'host={parts.hostname}']
+            if parts.username:
+                params.append(f'user={parts.username}')
+            params_str = ','.join(params)
+            mountpoint = f'sftp:{params_str}'
+            subdir = os.path.join(*parts.path.split('/'))
+            return os.path.join(gvfs_base_dir, mountpoint, subdir)
+        case _:
+            raise ConversionError(f"Cannot yet understand scheme {parts.scheme}")
+
+def print_error(msg: str) -> None:
+    print(f"rox-gvfs: error: {msg}", file=sys.stderr)
+
+def quit_with_fatal_error(msg: str, exitcode: int) -> NoReturn:
+    print_error(msg)
+    try:
+        messagebox.showerror("rox-gvfs", msg)
+    except tkinter.TclError as exc:
+        print_error(f"TclError opening error dialog: {exc}")
+    sys.exit(exitcode)
+
+
+def main():
+    gvfs_base_dir: str
+    if 'XDG_RUNTIME_DIR' not in os.environ:
+        quit_with_fatal_error("XDG_RUNTIME_DIR not set", exitcode=1)
+    elif not os.environ['XDG_RUNTIME_DIR']:
+        quit_with_fatal_error("XDG_RUNTIME_DIR is blank", exitcode=1)
+    else:
+        gvfs_base_dir = os.path.join(os.environ['XDG_RUNTIME_DIR'], 'gvfs')
+        try:
+            url = sys.argv[1]
+            directory_to_open = directory(gvfs_base_dir, url)
+        except ConversionError as exc:
+            quit_with_fatal_error(str(exc), exitcode=1)
+        else:
+            print(f"Opening {directory_to_open}", file=sys.stderr)
+            result = subprocess.run(['rox', directory_to_open])
+            sys.exit(result.returncode)
+
+if __name__ == "__main__":
+    main()
