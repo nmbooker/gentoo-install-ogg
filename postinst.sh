@@ -471,6 +471,8 @@ echo "dev-lang/python tk" > /etc/portage/package.use/python-tkinter
 commit_etc "Enable Tkinter when building Python"
 echo "app-text/xpdf cmyk utils" > /etc/portage/package.use/xpdf
 commit_etc "Enable custom USE flags for app-text/xpdf"
+echo "=app-misc/khal-0.10.5::gentoo ~amd64" > /etc/portage/package.accept_keywords/khal
+commit_etc "Allow Khal 0.10.5 to be installed from gentoo repo"
 commit_etc "Commit before emerging desktop utilities"
 my_emerge --verbose --newuse \
 	app-admin/conky \
@@ -482,6 +484,7 @@ my_emerge --verbose --newuse \
 	app-backup/timeshift \
 	app-editors/emacs \
 	app-emulation/virtualbox \
+	app-misc/khal \
 	app-misc/stripansi \
 	app-misc/remind \
 	app-shells/gentoo-zsh-completions \
