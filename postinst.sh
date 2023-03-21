@@ -473,6 +473,20 @@ echo "app-text/xpdf cmyk utils" > /etc/portage/package.use/xpdf
 commit_etc "Enable custom USE flags for app-text/xpdf"
 echo "=app-misc/khal-0.10.5::gentoo ~amd64" > /etc/portage/package.accept_keywords/khal
 commit_etc "Allow Khal 0.10.5 to be installed from gentoo repo"
+echo "=dev-python/click-log-0.4.0 ~amd64" > /etc/portage/package.accept_keywords/click-log
+commit_etc "Unmask dev-python/click-log required by app-misc/khal"
+echo "=dev-python/vdirsyncer-0.19.1 ~amd64" > /etc/portage/package.accept_keywords/vdirsyncer
+commit_etc "Unmask dev-python/vdirsyncer required by dev-python/khal"
+echo "=dev-python/aiostream-0.4.5 ~amd64" > /etc/portage/package.accept_keywords/aiostream
+commit_etc "Unmask dev-python/aiostream required by dev-python/vdirsyncer"
+cat > /etc/portage/package.use/brotli <<-END
+	# required by dev-python/aiohttp-3.8.4::gentoo
+	# required by dev-python/vdirsyncer-0.19.1::gentoo
+	# required by app-misc/khal-0.10.5::gentoo
+	# required by app-misc/khal (argument)
+	app-arch/brotli python
+	END
+commit_etc "Set app-arch/brotli use flag required by dev-python/aiohttp"
 commit_etc "Commit before emerging desktop utilities"
 my_emerge --verbose --newuse \
 	app-admin/conky \
