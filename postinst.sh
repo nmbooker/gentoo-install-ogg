@@ -498,6 +498,7 @@ my_emerge --verbose --newuse \
 	app-backup/timeshift \
 	app-editors/emacs \
 	app-emulation/virtualbox \
+	app-misc/ddate \
 	app-misc/khal \
 	app-misc/stripansi \
 	app-misc/remind \
