@@ -511,6 +511,7 @@ my_emerge --verbose --newuse \
 		xfce-base/tumbler \
 	media-sound/pavucontrol-qt \
 	media-sound/pnmixer \
+	net-irc/hexchat \
 	net-misc/networkmanager \
 	net-p2p/syncthing \
 	net-print/gtklp \
