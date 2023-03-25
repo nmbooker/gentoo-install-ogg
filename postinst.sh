@@ -487,6 +487,8 @@ cat > /etc/portage/package.use/brotli <<-END
 	app-arch/brotli python
 	END
 commit_etc "Set app-arch/brotli use flag required by dev-python/aiohttp"
+echo "=x11-misc/seturgent-9999::local ~amd64" > /etc/portage/package.accept_keywords/seturgent
+commit_etc "Unmask my local ebuild of x11-misc/seturgent"
 commit_etc "Commit before emerging desktop utilities"
 my_emerge --verbose --newuse \
 	app-admin/conky \
@@ -523,6 +525,7 @@ my_emerge --verbose --newuse \
 	x11-misc/dex \
 	x11-misc/gigolo \
 	x11-misc/redshift \
+	x11-misc/seturgent \
 	x11-themes/gentoo-artwork
 	# pfl provides e-file
 		# https://forums.gentoo.org/viewtopic-t-822242-start-0.html
