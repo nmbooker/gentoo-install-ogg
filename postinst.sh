@@ -529,6 +529,11 @@ my_emerge --verbose --newuse \
 		# https://forums.gentoo.org/viewtopic-t-822242-start-0.html
 commit_etc "emerged desktop utilities"
 
+echo "dev-vcs/git tk" > /etc/portage/package.use/git
+commit_etc "Set USE flag tk for dev-vcs/git"
+my_emerge --changed-use --verbose --deep dev-vcs/git
+commit_etc "Emerged dev-vcs/git for new USE flags"
+
 systemctl enable --now cronie.service
 commit_etc "Enable cronie for task scheduling"
 
