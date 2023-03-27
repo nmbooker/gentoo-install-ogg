@@ -1,17 +1,19 @@
 #!/bin/bash
 
-max_jobs=6
-max_load=3.5
-	# number of real cores, plus 1 to maybe possibly take advantage of hypertghreading and IO bound work
 
 USE="X dist-kernel gpm png pulseaudio unicode xinerama -llvm"
 
 case "$(hostname)" in
 	ogg)
+		max_jobs=6
+		max_load=3.5
+			# number of real cores, plus 1 to maybe possibly take advantage of hypertghreading and IO bound work
 		VIDEO_CARDS="nouveau intel vesa"
 		INPUT_DEVICES="[default]"
 	;;
 	gentoo-encrypted-bios-dev)
+		max_jobs=3
+		max_load=2.5
 		VIDEO_CARDS="virtualbox vesa"
 		INPUT_DEVICES="libinput vmmouse wacom"
 	;;
