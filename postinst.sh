@@ -534,6 +534,10 @@ commit_etc "Set USE flag tk for dev-vcs/git"
 my_emerge --changed-use --verbose --deep dev-vcs/git
 commit_etc "Emerged dev-vcs/git for new USE flags"
 
+echo "games-puzzle/xbomb ~amd64" > /etc/portage/package.accept_keywords/xbomb
+my_emerge --verbose --newuse games-puzzle/xbomb
+commit_etc "Emerged games-puzzle/xbomb"
+
 systemctl enable --now cronie.service
 commit_etc "Enable cronie for task scheduling"
 
