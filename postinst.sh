@@ -5,7 +5,17 @@ max_load=3.5
 	# number of real cores, plus 1 to maybe possibly take advantage of hypertghreading and IO bound work
 
 USE="X dist-kernel gpm png pulseaudio unicode xinerama -llvm"
-VIDEO_CARDS="nouveau intel vesa"
+
+case "$(hostname)" in
+	ogg)
+		VIDEO_CARDS="nouveau intel vesa"
+		INPUT_DEVICES="[default]"
+	;;
+	gentoo-encrypted-bios-dev)
+		VIDEO_CARDS="virtualbox vesa"
+		INPUT_DEVICES="libinput vmmouse wacom"
+	;;
+esac
 
 if [ "$(id -u)" -ne 0 ]
 then
@@ -166,13 +176,21 @@ select_desktop_profile
 if ! grep '^USE=' /etc/portage/make.conf
 then
 	echo 'USE="'$USE'"' >> /etc/portage/make.conf
-	commit_etc "Set USE flags for ogg"
+	commit_etc "Set USE flags for $(hostname)"
 fi
 
 if ! grep '^VIDEO_CARDS' /etc/portage/make.conf
 then
 	echo 'VIDEO_CARDS="'$VIDEO_CARDS'"' >> /etc/portage/make.conf
-	commit_etc "Set up VIDEO_CARDS for ogg"
+	commit_etc "Set up VIDEO_CARDS for $(hostname)"
+fi
+
+if 
+	[[ "$INPUT_DEVICES" != "[default]" ]] 
+	&& ! grep '^INPUT_DEVICES=' /etc/portage/make.conf
+then
+	echo 'INPUT_DEVICES="'$INPUT_DEVICES'"' >> /etc/portage/make.conf
+	commit_etc "Set up INPUT_DEVICES for $(hostname)"
 fi
 
 if ! grep '^L10N=' /etc/portage/make.conf
@@ -180,6 +198,7 @@ then
 	echo 'L10N="en-GB en"' >> /etc/portage/make.conf
 	commit_etc "Set up LION (used by at least firefox-bin)"
 fi
+
 
 
 echo 'media-libs/libsndfile minimal' > /etc/portage/package.use/firefox-bin-temp
