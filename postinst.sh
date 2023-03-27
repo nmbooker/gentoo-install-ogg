@@ -193,7 +193,7 @@ then
 fi
 
 if 
-	[[ "$INPUT_DEVICES" != "[default]" ]] 
+	[[ "$INPUT_DEVICES" != "[default]" ]] \
 	&& ! grep '^INPUT_DEVICES=' /etc/portage/make.conf
 then
 	echo 'INPUT_DEVICES="'$INPUT_DEVICES'"' >> /etc/portage/make.conf
