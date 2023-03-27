@@ -15,6 +15,11 @@ case "$(hostname)" in
 		VIDEO_CARDS="virtualbox vesa"
 		INPUT_DEVICES="libinput vmmouse wacom"
 	;;
+	*)
+		echo "$(basename "$0"): error: Unrecognised hostname $(hostname).  Exiting." >&2
+		exit 7
+	;;
+
 esac
 
 if [ "$(id -u)" -ne 0 ]
