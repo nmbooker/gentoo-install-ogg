@@ -81,6 +81,7 @@ function install_basics()
 		app-misc/tmux \
 		net-misc/openssh \
 		app-editors/vim \
+		sys-apps/renameutils \
 		sys-process/lsof \
 		sys-fs/ntfs3g \
 		dev-util/dialog \
