@@ -504,6 +504,7 @@ my_emerge --verbose --newuse \
 	app-misc/khal \
 	app-misc/stripansi \
 	app-misc/remind \
+	app-office/abiword \
 	app-shells/gentoo-zsh-completions \
 	app-shells/zsh \
 	app-shells/zsh-completions \
