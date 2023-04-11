@@ -505,7 +505,7 @@ my_emerge --verbose --newuse \
 	app-misc/khal \
 	app-misc/stripansi \
 	app-misc/remind \
-	app-office/abiword \
+	app-office/libreoffice-bin \
 	app-shells/gentoo-zsh-completions \
 	app-shells/zsh \
 	app-shells/zsh-completions \
@@ -533,6 +533,7 @@ my_emerge --verbose --newuse \
 	# pfl provides e-file
 		# https://forums.gentoo.org/viewtopic-t-822242-start-0.html
 commit_etc "emerged desktop utilities"
+# Notes on libreoffice-bin Base support: https://wiki.gentoo.org/wiki/LibreOffice
 
 echo "dev-vcs/git tk" > /etc/portage/package.use/git
 commit_etc "Set USE flag tk for dev-vcs/git"
