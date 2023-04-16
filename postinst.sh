@@ -492,6 +492,12 @@ echo "sys-apps/gnome-disk-utility fat" > /etc/portage/package.use/gnome-disk-uti
 commit_etc "Enable 'fat' USE flag for sys-apps/gnome-disk-utilty"
 echo "x11-plugins/wmudmount gcr secret" > /etc/portage/package.use/wmudmount
 commit_etc "Enable gcr and secret USE flags for x11-plugins/wmudmount"
+cat > /etc/portage/package.use/sys-libs_zlib <<-END
+	# required by media-video/vlc-3.0.18::gentoo
+	# required by media-video/vlc (argument)
+	>=sys-libs/zlib-1.2.13-r1 minizip
+	END
+commit_etc "Set USE flags for vlc dependencies"
 commit_etc "Commit before emerging desktop utilities"
 my_emerge --verbose --newuse \
 	app-admin/conky \
@@ -517,6 +523,7 @@ my_emerge --verbose --newuse \
 		xfce-base/tumbler \
 	media-sound/pavucontrol-qt \
 	media-sound/pnmixer \
+	media-video/vlc \
 	net-irc/hexchat \
 	net-misc/networkmanager \
 	net-p2p/syncthing \
