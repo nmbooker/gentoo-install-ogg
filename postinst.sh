@@ -488,6 +488,8 @@ cat > /etc/portage/package.use/brotli <<-END
 	app-arch/brotli python
 	END
 commit_etc "Set app-arch/brotli use flag required by dev-python/aiohttp"
+echo "sys-apps/mount-gtk ~amd64" > /etc/portage/package.accept_keywords/mount-gtk
+commit_etc "Unmask sys-apps/mount-gtk"
 echo "sys-apps/gnome-disk-utility fat" > /etc/portage/package.use/gnome-disk-utility
 commit_etc "Enable 'fat' USE flag for sys-apps/gnome-disk-utilty"
 commit_etc "Commit before emerging desktop utilities"
@@ -521,6 +523,7 @@ my_emerge --verbose --newuse \
 	net-print/gtklp \
 	sci-calculators/galculator \
 	sys-apps/gnome-disk-utility \
+	sys-apps/mount-gtk \
 	sys-apps/the_silver_searcher \
 	sys-fs/udiskie \
 	sys-process/cronie \
