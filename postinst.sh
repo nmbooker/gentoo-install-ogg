@@ -490,6 +490,8 @@ cat > /etc/portage/package.use/brotli <<-END
 commit_etc "Set app-arch/brotli use flag required by dev-python/aiohttp"
 echo "sys-apps/gnome-disk-utility fat" > /etc/portage/package.use/gnome-disk-utility
 commit_etc "Enable 'fat' USE flag for sys-apps/gnome-disk-utilty"
+echo "x11-plugins/wmudmount gcr secret" > /etc/portage/package.use/wmudmount
+commit_etc "Enable gcr and secret USE flags for x11-plugins/wmudmount"
 commit_etc "Commit before emerging desktop utilities"
 my_emerge --verbose --newuse \
 	app-admin/conky \
@@ -529,6 +531,7 @@ my_emerge --verbose --newuse \
 	x11-misc/dex \
 	x11-misc/gigolo \
 	x11-misc/redshift \
+	x11-plugins/wmudmount \
 	x11-themes/gentoo-artwork
 	# pfl provides e-file
 		# https://forums.gentoo.org/viewtopic-t-822242-start-0.html
