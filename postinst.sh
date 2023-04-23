@@ -328,6 +328,20 @@ function install_seamonkey()
 }
 install_seamonkey
 
+function install_chromium()
+{
+	commit_etc "Pre-installation commit for install_chromium"
+	# suid not needed because equery uses says that it's only necessary
+	# on CONFIG_USER_NS=n kernels.
+	# $ cat /usr/src/linux/.config | grep CONFIG_USER_NS
+	# CONFIG_USER_NS=y
+	echo "www-client/chromium-bin -suid" > /etc/portage/package.use/chromium-bin
+	commit_etc "Disable suid USE flag for www-client/chromium-bin"
+	my_emerge --noreplace --verbose www-client/chromium-bin
+	commit_etc "Emerged www-client/chromium-bin"
+}
+install_chromium
+
 function install_nscde_deps()
 {
 	mkdir -p /etc/portage/sets
