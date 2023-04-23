@@ -1,0 +1,63 @@
+ * Messages for package media-libs/openh264-2.3.1-r1:
+
+ * Please restart your login session, in order for the session's environment
+ * to include the new MOZ_GMP_PATH variable.
+ * 
+ * This package attempts to override the Mozilla GMPInstaller auto-update process,
+ * however even if it is not successful in doing so the profile-installed plugin
+ * will not be used unless this package is removed.  This package will take precedence
+ * over any gmp-gmpopenh264 that may be installed in a user's profile.
+ * 
+
+ * Messages for package www-client/chromium-bin-109.0.5414.74:
+
+ * 
+ * Some web pages may require additional fonts to display properly.
+ * Try installing some of the following packages if some characters
+ * are not displayed properly:
+ * - media-fonts/arphicfonts
+ * - media-fonts/droid
+ * - media-fonts/ipamonafont
+ * - media-fonts/noto
+ * - media-fonts/ja-ipafonts
+ * - media-fonts/takao-fonts
+ * - media-fonts/wqy-microhei
+ * - media-fonts/wqy-zenhei
+ * 
+ * To fix broken icons on the Downloads page, you should install an icon
+ * theme that covers the appropriate MIME types, and configure this as your
+ * GTK+ icon theme.
+ * 
+ * For native file dialogs in KDE, install kde-apps/kdialog.
+ * 
+ * To make password storage work with your desktop environment you may
+ * have install one of the supported credentials management applications:
+ * - app-crypt/libsecret (GNOME)
+ * - kde-frameworks/kwallet (KDE)
+ * If you have one of above packages installed, but don't want to use
+ * them in Chromium, then add --password-store=basic to CHROMIUM_BIN_FLAGS
+ * in /etc/chromium-bin/default.
+ * 
+ * (Note: Above message is only printed the first time package is
+ * installed. Please look at /usr/share/doc/chromium-bin-109.0.5414.74/README.gentoo*
+ * for future reference)
+ * For VA-API support you need to install media-libs/libva with
+ * USE=X enabled.
+ * 
+ * VA-API is disabled by default at runtime. You have to enable it
+ * by adding --enable-features=VaapiVideoDecoder to CHROMIUM_BIN_FLAGS
+ * in /etc/chromium-bin/default.
+ * 
+ * Qt5 is disabled by default at runtime. You have to enable it
+ * by adding --enable-features=AllowQt5 to CHROMIUM_BIN_FLAGS
+ * in /etc/chromium-bin/default. Afterwards you can select the
+ * Qt5 theme in Settings->Appearance.
+ * 
+ * chromium-bin profile defaults to ${HOME}/.config/chromium-bin.
+ * Some extensions (e.g. KeepassXC) expect default chromium profile
+ * at ${HOME}/.config/chromium. You can overwrite this by adding
+ * --user-data-dir=${HOME}/.config/chromium to CHROMIUM_BIN_FLAGS
+ * in /etc/chromium-bin/default.
+
+ * GNU info directory index is up-to-date.
+
