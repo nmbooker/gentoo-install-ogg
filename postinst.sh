@@ -223,6 +223,7 @@ env-update
 
 function enable_networkmanager()
 {
+	my_emerge --verbose net-misc/networkmanager
 	systemctl start NetworkManager
 	systemctl enable NetworkManager
 }
