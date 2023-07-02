@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-USE="X dist-kernel gpm png pulseaudio unicode xinerama -llvm"
+USE="X dist-kernel gpm networkmanager png pulseaudio unicode xinerama -llvm"
 
 case "$(hostname)" in
 	ogg)
@@ -220,6 +220,13 @@ echo "Rebuilding @world with new use flags" >&2
 my_emerge --verbose --newuse --deep @world || exit 5
 echo "env-update..." >&2
 env-update
+
+function enable_networkmanager()
+{
+	systemctl start NetworkManager
+	systemctl enable NetworkManager
+}
+enable_networkmanager
 
 install_basics
 
