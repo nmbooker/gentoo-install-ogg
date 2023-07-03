@@ -512,7 +512,7 @@ echo "dev-lang/python tk" > /etc/portage/package.use/python-tkinter
 commit_etc "Enable Tkinter when building Python"
 echo "app-text/xpdf cmyk utils" > /etc/portage/package.use/xpdf
 commit_etc "Enable custom USE flags for app-text/xpdf"
-echo "=app-misc/khal-0.10.5::gentoo ~amd64" > /etc/portage/package.accept_keywords/khal
+echo ">=app-misc/khal-0.10.5::gentoo ~amd64" > /etc/portage/package.accept_keywords/khal
 commit_etc "Allow Khal 0.10.5 to be installed from gentoo repo"
 echo "=dev-python/click-log-0.4.0 ~amd64" > /etc/portage/package.accept_keywords/click-log
 commit_etc "Unmask dev-python/click-log required by app-misc/khal"
