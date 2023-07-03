@@ -229,6 +229,8 @@ function enable_networkmanager()
 	commit_etc "Configured NetworkManager"
 }
 enable_networkmanager
+nmtui connection modify 'Wired Connection 1' ipv6.method disabled
+commit_etc "Disable ipv6 on main wired connection"
 
 install_basics
 
