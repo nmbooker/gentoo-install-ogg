@@ -226,6 +226,7 @@ function enable_networkmanager()
 	my_emerge --verbose --newuse net-misc/networkmanager
 	systemctl start NetworkManager
 	systemctl enable NetworkManager
+	commit_etc "Configured NetworkManager"
 }
 enable_networkmanager
 
